@@ -1,0 +1,16 @@
+.main {
+  background-color: black;
+  height: 100vh;
+}
+
+.header {
+  background-color: black;
+  color: yellow;
+  margin: 0;
+}
+
+.footer {
+  background-color: black;
+  color: yellow;
+  margin: 0;
+}

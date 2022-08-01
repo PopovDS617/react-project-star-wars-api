@@ -1,0 +1,16 @@
+.card {
+  padding: 0;
+  margin: 1rem;
+  box-shadow: 0 0 6px #eeda00ce;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.2s;
+
+  color: yellow;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px #eedb00;
+  size-adjust: 12;
+  transform: scale(1.03);
+}

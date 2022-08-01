@@ -1,0 +1,41 @@
+.header {
+  padding-top: 3rem;
+  background-color: black;
+  color: #eedb00;
+  margin: 0;
+  height: 10rem;
+  text-align: center;
+}
+
+.hero {
+  font-size: 1.3rem;
+  padding-bottom: 3rem;
+}
+
+.nav ul {
+  color: #eedb00;
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.nav li {
+  font-size: 2rem;
+  color: #eedb00;
+  margin-left: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #eedb00;
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  text-decoration: underline;
+  color: #eedb00;
+  text-shadow: white;
+}
