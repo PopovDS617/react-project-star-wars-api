@@ -1,4 +1,36 @@
-* {
+.mainWrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 0;
-  padding: 0;
+  border-color: black;
+  background-image: url('./assets/385317-4k-wallpaper.jpg');
+  background-image: url('./assets/385317-4k-wallpaper.jpg');
+  background-position: bottom;
+  background-repeat: repeat;
+}
+
+.contentWrapper {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+
+  height: 75vh;
+
+  backdrop-filter: blur(2px);
+  color: #eedb00;
+}
+
+.mainNav {
+  height: 20vh;
+  backdrop-filter: blur(2px);
+  width: 70%;
+}
+
+.mainFooter {
+  height: 5vh;
+  backdrop-filter: blur(2px);
+  width: 70%;
 }

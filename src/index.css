@@ -1,9 +1,22 @@
-* {
+@font-face {
+  font-family: 'SfDistantGalaxy';
+  src: url('./fonts/SfDistantGalaxy-0l3d.ttf');
+}
+
+@font-face {
+  font-family: 'NewsGothicBold';
+  src: url('./fonts/News\ Gothic\ Bold.otf');
+}
+
+@font-face {
+  font-family: 'Mandalor';
+  src: url('./fonts/mandalor.ttf');
+}
+
+html,
+body {
   margin: 0;
   padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-.body {
-  min-height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
