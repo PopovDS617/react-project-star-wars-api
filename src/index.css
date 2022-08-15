@@ -13,6 +13,8 @@
   src: url('./fonts/mandalor.ttf');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 html,
 body {
   margin: 0;

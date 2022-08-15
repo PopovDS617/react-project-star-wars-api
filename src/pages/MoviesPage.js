@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import Card from '../components/Card';
+import { Link } from 'react-router-dom';
+
 import episodeOnePoster from '../assets/episode_one_poster.jpg';
 import episodeTwoPoster from '../assets/episode_two_poster.jpg';
 import episodeThreePoster from '../assets/episode_three_poster.jpg';
@@ -10,12 +11,12 @@ import episodeSixPoster from '../assets/episode_six_poster.jpg';
 import styles from './MoviesPage.module.css';
 
 const postersArr = [
-  episodeFourPoster,
-  episodeFivePoster,
-  episodeSixPoster,
   episodeOnePoster,
   episodeTwoPoster,
   episodeThreePoster,
+  episodeFourPoster,
+  episodeFivePoster,
+  episodeSixPoster,
 ];
 
 const changeDateFormat = (date) => {
@@ -61,6 +62,7 @@ const MoviesPage = () => {
     const transformedMovies = data.results.map((movieData) => {
       return {
         key: movieData.episode_id,
+        id: movieData.episode_id,
         episodeRomanNumeral: episodeToRoman(movieData.episode_id),
         title: movieData.title,
         director: movieData.director,
@@ -86,21 +88,40 @@ const MoviesPage = () => {
   if (!isLoading && loadedMovies.length < 1) {
     content = <p>found no movies</p>;
   }
-  const loadedMoviesAndPosters = loadedMovies.map((movie, i) => {
-    return {
-      ...movie,
-      image: postersArr[i],
-    };
-  });
+  const loadedSortedMoviesPosters = loadedMovies
+    .sort((a, b) => {
+      if (a.id > b.id) {
+        return 1;
+      }
+      if (a.id < b.id) {
+        return -1;
+      }
+      return 0;
+    })
+    .map((movie, i) => {
+      return {
+        ...movie,
+        image: postersArr[i],
+      };
+    });
   if (!isLoading && loadedMovies.length > 0) {
-    content = loadedMoviesAndPosters.map((movie) => {
+    content = loadedSortedMoviesPosters.map((movie) => {
       return (
-        <Card key={movie.key}>
-          <img className={styles.img} src={movie.image} />
-          <h1>
-            Episode {movie.episodeRomanNumeral}: {movie.title}
-          </h1>
-        </Card>
+        <Link to={`/movies/${movie.id}`}>
+          <div key={movie.key} className={styles.episodeWrapper}>
+            <div className={styles.episodeNumber}>
+              <p>Episode {movie.episodeRomanNumeral}</p>
+            </div>
+            <img
+              className={styles.img}
+              src={movie.image}
+              alt="star wars poster"
+            />
+            <div className={styles.episodeTitle}>
+              <p>{movie.title}</p>
+            </div>
+          </div>
+        </Link>
       );
     });
   }

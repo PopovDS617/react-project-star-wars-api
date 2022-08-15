@@ -14,7 +14,7 @@
 
 .contentWrapper {
   display: flex;
-  width: 70%;
+  width: 90%;
   justify-content: center;
 
   height: 75vh;
@@ -26,11 +26,11 @@
 .mainNav {
   height: 20vh;
   backdrop-filter: blur(2px);
-  width: 70%;
+  width: 90%;
 }
 
 .mainFooter {
   height: 5vh;
   backdrop-filter: blur(2px);
-  width: 70%;
+  width: 90%;
 }

@@ -21,7 +21,7 @@
 
 .homePageTitle h1 {
   animation-name: show;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -53,7 +53,7 @@
   font-weight: lighter;
   line-height: 3rem;
   animation-name: show;
-  animation-duration: 5s;
+  animation-duration: 3s;
   animation-delay: 3s;
   animation-fill-mode: forwards;
   transform: scale(1, 1.2);
